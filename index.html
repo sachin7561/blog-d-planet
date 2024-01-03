@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="data:image/png;base64,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">
+    <title>Adventure Travel Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  .custom-button {
+      background-color: #033158; /* Dark blue color, you can change this color as needed */
+      color: #fff; /* Text color */
+      border-radius: 15px; /* For curved edges */
+      /* padding: 10px 20px; Add padding to adjust the button size */
+
+      padding: 15px 15px; /* Adjust the padding to control the button size */
+      font-size: 25px; 
+    }
+
+
+
+    /* Custom CSS for inside content */
+    .inside-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-60%, -70%);
+      background-color: rgba(255, 255, 255, 0.4); /* Example background color for inside content */
+      padding: 10px;
+      color:white;
+      width: 70%;
+      margin-left: 40px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .rounded-image {
+      border-radius: 40%;
+    }
+
+</style>
+</head>
+<body>
+    <!-- nav bar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mx-4 ">
+        <a class="navbar-brand" href="#">
+            <img
+              src="./image/logo.jpg"
+              height="80"
+              alt="MDB Logo"
+              loading="lazy" 
+            />
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown ">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 " >
+            <li class="nav-item active">
+              <a class="nav-link" href="#">BLOG<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">DESIGINATION</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">EXPERIRNCES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">ITINERARIES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">NOMADIC LIVING</a>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                TRAVEL TIPS
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">BEST TRAVEL TRIP</a>
+                <a class="dropdown-item" href="#">TRAVEL RESOURCES</a>
+                <a class="dropdown-item" href="#">BUDGET TRAVEL TIPS</a>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+              </li>
+            
+          </ul>
+        </div>
+      </nav>
+<!-- image division 
+ -->
+ <div class="image-container">
+  <img src="./image/front.png" class="img-fluid" alt="Wild Landscape"  width="100%"/>
+  <div>
+
+
+
+<!-- logo div  -->
+
+<div class="container mx-5 pt-5">
+  <div class="row">
+      <div class="col-md-2 ">
+          <!-- First horizontal image -->
+          <img  width="400px" src="https://b606234.smushcdn.com/606234/wp-content/uploads/2020/01/National-Geographic-logo.jpg?lossy=1&strip=1&webp=1" class="img-fluid" alt="First Image">
+      </div>
+      <div class="col-md-2">
+          <!-- Second horizontal image -->
+          <img src="data:image/png;base64,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" class="img-fluid" alt="Second Image">
+      </div>
+      <div class="col-md-2">
+          <!-- Third horizontal image -->
+          <img src="https://logos-marques.com/wp-content/uploads/2021/02/BBC-Logo.png" class="img-fluid" alt="Third Image">
+      </div>
+      <div class="col-md-2">
+        <!-- Third horizontal image -->
+        <img src="https://logos-download.com/wp-content/uploads/2016/02/CNN-Travel-logo.png" class="img-fluid" alt="Third Image">
+    </div>
+    <div class="col-md-2">
+      <!-- Third horizontal image -->
+      <img src="data:image/png;base64,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" class="img-fluid" alt="Third Image">
+  </div>
+  <div class="col-md-2">
+    <!-- Third horizontal image -->
+    <img src="https://seeklogo.com/images/T/today-show-logo-DD8290C34B-seeklogo.com.png" class="img-fluid" alt="Third Image">
+</div>
+  
+      <!-- #endregion -->
+  </div>
+</div>
+
+<div class="container-fluid bg-light">
+ <div><h1 class="custom-heading text-center text-secondary">LATEST BLOG POSTS</h1></div>
+
+ <!-- card  -->
+ <div class="row row-cols-1 row-cols-md-3 g-4 m-0">
+  <div class="col">
+    <div class="card h-50">
+      <img src="./image/grid1.jpg" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+      <div class="card-body">
+        <h4 class="card-title text-center text-primary font">24 Best Indian Dishes To Try In India Or In An Indian Restaurant</h4>
+        
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-50">
+      <img src="./image/grid2.png" class="card-img-top" alt="Palm Springs Road"/>
+      <div class="card-body">
+        <h4 class="card-title text-center text-primary font">36 Best Places To Visit In Mexico In 2023</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-50">
+      <img src="./image/grid2.png" class="card-img-top"  alt="Los Angeles Skyscrapers"/>
+      <div class="card-body">
+        <h4 class="card-title text-center text-primary font">42 Best Things To Do In Santorini, Greece In 2023</h4>
+      </div>
+    </div>
+  </div>
+<!-- button  -->
+  <div class="d-grid gap-2 col-6 mx-auto ">
+    <button class="btn custom-button" type="button">READ MORE POSTS HERE</button>
+    
+  </div>
+</div>
+ <!-- NEW  -->
+
+ <div class="container"><h1 class="custom-heading text-center text-DARK pt-5">HOW CAN WE HELP YOU TRAVEL MORE?</h1></div>
+
+
+ <!-- 2ND GRID  -->
+
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4 pt-5">
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" height="400px" class="card-img-top" alt="Skyscrapers"/>
+
+      <div class="inside-content">
+        <!-- Your content here -->
+        <h2>DESTINATIONS</h2>
+        <p class="has-text-align-center has-white-color has-text-color" style="font-size:24px;">Explore Destinations around the world from 110 Countries on all 7 continents.</p>      </div>
+   
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top"height="400px" alt="Los Angeles Skyscrapers"/>
+      <div class="inside-content">
+        <!-- Your content here -->
+        <h2>ITINERARIES</h2>
+        <p class="has-text-align-center has-white-color has-text-color" style="font-size:24px;">Discover detailed itineraries from 3 days to 1 week for multiple destinations</p>
+      </div>
+     
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top"height="400px" alt="Palm Springs Road"/>
+      <div class="inside-content">
+        <!-- Your content here -->
+        <h2>TTRAVEL TIPS</h2>
+        <p class="has-text-align-center has-white-color has-text-color" style="font-size:24px;">Learn from the best. Travel tips gathered from our 10 years of full-time travel</p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- photo+ content  -->
+<div class="container">
+<div class="row bg-light mt-3 mx-1 pt-5">
+  <div class="col-6">
+    <div class="container-md">
+      <img  width="600px" height="500px" src="https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/images/optimized/rev-88a144f/theplanetd.com/images/About-the-planet-d-front-page.jpg" alt="Your Image" class="rounded-image">
+    </div>
+  </div>
+
+  <div class="col-6">
+    
+    <div class="container-md text-center text-DARK align-items-center pt-3 ">
+      <h1>ABOUT</h1>
+      <h1>DAVE AND DEB</h1><br>
+      </div><br>
+      <p class="has-text-align-center about-description text-center fs-4">Thanks for stopping by. We’re Dave and Deb the founders of one of the top 10 travel blogs in the world according to Forbes.</p><br>
+       <p class="has-text-align-center hide-on-mobile about-description text-center fs-4">12 years ago we left our jobs, sold everything we owned, and struck out on an adventure that not only changed our lives but inspired others to step out of their comfort zone and enrich their lives through travel.</p>
+       <div class="d-grid gap-2 col-6 mx-auto ">
+        <button class="btn custom-button" type="button">READ MORE ABOUT US HERE</button>
+        
+      </div>
+      </div>
+  </div>
+</div>
+</div>
+
+
+<div class="container"><h1 class="custom-heading text-center text-DARK pt-5">POPULAR BLOG POSTS</h1></div>
+
+
+
+
+  <div class="container pt-4">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/images/optimized/rev-88a144f/theplanetd.com/images/best-adults-only-all-inclusive-jamaica-800x600.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h4 class="card-title text-center text-primary font">The Best Adult’s Only All-Inclusive Resorts In Jamaica</h4>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/images/optimized/rev-88a144f/theplanetd.com/images/best-adults-only-all-inclusive-resorts-mexico-800x600.jpg" class="card-img-top" alt="Image 2">
+          <div class="card-body">
+            <h4 class="card-title text-center text-primary font">22 Adults Only All Inclusive Resorts In Mexico</h4>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/images/optimized/rev-88a144f/theplanetd.com/images/Best-All-Inclusive-Resorts-USA-800x600.jpg" class="card-img-top" alt="Image 3">
+          <div class="card-body">
+            <h4 class="card-title text-center text-primary font">21 Best All-Inclusive Resorts In The USA For 2023</h4>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/images/optimized/rev-88a144f/theplanetd.com/images/caribbean-islands-grand-cayman-800x600.jpg" class="card-img-top" alt="Image 4">
+          <div class="card-body">
+            <h4 class="card-title text-center text-primary font">20 Most Beautiful Caribbean Islands To Put On The Bucket List</h4>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container"><h1 class="custom-heading text-center text-DARK pt-5">WATCH OUR LATEST TRAVEL VIDEO</h1></div>
+  <h4 class="card-title text-center text-primary font pt-4" >NEW VIDEOS EACH WEEK!</h4>
+
+
+
+  
+<div class="row bg-light mt-3 mx-1 pt-5">
+  <div class="col-7">
+    <div class="container-md mx-4">
+      <iframe width="760" height="405" src="https://www.youtube.com/embed/icbImRTVq0o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    </div>
+  </div>
+
+  <div class="col-5">
+    
+    <div class="container-md ">
+      <h2 class="card-title text-center text-primary font pt-1">Watch Our Youtube Videos:</h2><br>
+      <h5 >Read our full experience in <a  class="card-title text-primary font">Things to do in Belfast</a></h5> <br>
+
+      <h5><a class="card-title text-primary font">Subscribe to our channel </a>for more travel videos and</H5>
+      <h5  class="card-title text-primary font pt-2"> Watch the full video here.</H5>
+      </div><br>
+      <br>
+      
+        <button class="btn custom-button" type="button">READ MORE </button>
+        
+      </div>
+      </div>
+  </div>
+</div>
+<!-- footer  -->
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block"> <span></span>
+     
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h5 class="text-uppercase fw-bold mb-4">
+            ABOUT US
+          </h5>
+          <p class="text-primary">
+            <a href="#!" class="text-reset "></a>About Dave and Deb
+          </p>
+          <p class="text-primary">
+            <a href="#!" class="text-reset"></a>Contact Us
+          </p>
+          <p class="text-primary">
+            <a href="#!" class="text-reset"></a>Privacy Policy
+          </p>
+          <p class="text-primary">
+            <a href="#!" class="text-reset"></a>Work With Us
+          </p>
+          <p class="text-primary">
+            <a href="#!" class="text-reset"></a>Press and Media
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h5 class="text-uppercase fw-bold mb-3">
+            FOLLOW US ON SOCIAL
+          </h5>
+          <p>
+           <img width="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIgZZVDeJrKO4W2NPjVcZIjTJSspXvbaGxO4BmSlRUINZgBU8xxjZ0Klg_FLGd6TldtA&usqp=CAU" alt="">
+          </p>
+          <div class="input-group rounded">
+            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <span class="input-group-text border-0" id="search-addon">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+         
+         
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h5 class="text-uppercase fw-bold mb-4">
+            TRAVEL RESOURCES
+          </h5>
+          <p class="text-primary">
+            <a href="#!" class="text-reset"></a>Best Travel Tips
+          </p>
+          <p class="text-primary">
+            <a href="#!" class="text-reset"></a>How to Save Money for Travel
+          </p>
+          <p class="text-primary">
+            <a href="#!" class="text-reset"></a>The Ultimate Travel Packing List
+          </p>
+          <p class="text-primary">
+            <a href="#!" class="text-reset"></a>Travel Safety Tips
+          </p>
+          <p class="text-primary" >
+            <a href="#!" class="text-reset"></a>How to Travel on a Budget
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        
+
+
+        
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center text-white  bg-dark p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">© 2023 THE PLANET D | ADVENTURE TRAVEL BLOG</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+<!-- end 
+ -->
+</div>
+ 
+</body>
+</html>
